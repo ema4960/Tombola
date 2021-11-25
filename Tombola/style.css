@@ -1,0 +1,42 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #B5823F;
+}
+
+h1{
+    text-align: center;
+    margin:2rem;
+}
+
+div{
+    border:1px solid black;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:90vh;
+}
+
+.content__winners{
+    display: flex;
+    flex-direction:column;
+    width:20%;
+    height:100%;
+}
+
+.content__numbers{
+    width:55%;
+    height:100%;
+}
+
+.content__cards{
+    width:25%;
+    height:100%;
+}
