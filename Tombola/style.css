@@ -1,3 +1,11 @@
+:root{
+    --primary800: #000;
+    --primary600: #035008;
+    --primary500: #550400;
+    --primary400: #8F5A15;
+    --primary300: #B5823F;
+}
+
 
 * {
     margin: 0;
@@ -5,16 +13,42 @@
 }
 
 body{
-    background-color: #B5823F;
+    background-color: var(--primary300);
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.125rem;
+    line-height: 24px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1{
-    text-align: center;
-    margin:2rem;
+    font-size: 5rem;
+    line-height: 90px;;
+}
+
+h2{
+    font-size: 3rem;
+    line-height: 56px;;
+}
+
+h3{
+    font-size: 1.5rem;
+    line-height: 32px;;
+}
+
+h4{
+    font-size: 1.25rem;
+    line-height: 24px;;
 }
 
 div{
     border:1px solid black;
+}
+
+#title{
+    text-align: center;
+    font-weight: 400;
+    
 }
 
 .content{
@@ -37,6 +71,63 @@ div{
 }
 
 .content__cards{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
     width:25%;
     height:100%;
 }
+
+.content__cards h2{
+    text-align: center;
+    font-weight: 400;
+}
+
+.content__cards h3{
+    text-align: center;
+    font-weight: 400;
+    color: var(--primary500);
+}
+
+.content__cards h4{
+    text-align: center;
+    font-weight: 500; 
+    color: var(--primary500); 
+}
+
+.cards__grid{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    height: 50%;
+    width: 80%;
+    max-height: 370px;
+    max-width:300px;
+    display: grid;
+    grid-template-columns:repeat(3, 0.2fr 0.6fr)  0.2fr 0.2fr;
+    justify-items: left;
+    align-items: center;
+}
+
+.cards__grid p{
+    font-size:1.5rem;
+}
+
+.cards__grid input[type="checkbox"]{
+    cursor: pointer;
+    border-radius: 0.15em;
+}
+
+.cards__price{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.cards__price input{
+    margin-left: 0.4rem;
+    width: 20%;
+    background-color: var(--primary300);
+    text-align: center;
+}
+

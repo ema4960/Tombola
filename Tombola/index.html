@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
-</head >
-<body>
-    <h1>Tombola</h1>
+</head>
+<body onload="showCartelle();">
+    <h1 id="title">TOMBOLA</h1>
 
     <div class="content">
         <div class="content__winners"></div>
@@ -17,8 +20,14 @@
         <div class="content__cards">
             <h2>Cartelle</h2>
             <h4>Seleziona le cartelle utilizzate</h4>
+            <div class="cards__grid"></div>
+            <div class="cards__price">
+                <h3>Prezzo Cartelle:</h3>
+                <input type="number" value="0.00">
+            </div>
         </div>
     </div>
+
 
     
 </body>

@@ -1,5 +1,6 @@
 function showCartelle(){
+    cardsGridBox=document.getElementsByClassName("cards__grid"); 
     for(i=1;i<=24;i++){
-       document.getElementById("cartelle").innerHTML+="<input type='checkbox'>"+i+"</input>"; 
+       cardsGridBox[0].innerHTML+="<input type='checkbox'><p>"+i+"</p></input>";
     }
 }
