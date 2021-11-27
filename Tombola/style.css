@@ -1,5 +1,6 @@
 :root{
     --primary800: #000;
+    --primary700: #013b05;
     --primary600: #035008;
     --primary500: #550400;
     --primary400: #8F5A15;
@@ -51,6 +52,27 @@ div{
     
 }
 
+#background__angleL{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    z-index: -1;
+}
+
+#background__angleR{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+    height: 200px;
+    width: 200px;
+    z-index: -1;
+}
+
+
+
 .content{
     display: flex;
     flex-direction: row;
@@ -61,14 +83,59 @@ div{
 .content__winners{
     display: flex;
     flex-direction:column;
-    width:20%;
+    width:25%;
     height:100%;
+
+}
+
+.winners{
+    margin: 1rem auto;
+    height:15rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary400);
+    border-radius: 6px;
+    color: var(--primary500);
+    max-width: 230px;
+    min-width:180px;
+
+}
+
+.winners__item{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .content__numbers{
-    width:55%;
+    width:50%;
     height:100%;
 }
+
+.numbers__grid{
+    display: grid;
+    grid-template-columns: repeat(10, 45px);
+    justify-content:center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width:450px;
+    background-color: var(--primary400);
+    border-radius: 6px;
+}
+
+.numbers__grid p{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 45px;
+    width:45px;
+    height:45px;
+    color: var(--primary700);
+    font-weight: 600;
+}
+
 
 .content__cards{
     display: flex;
