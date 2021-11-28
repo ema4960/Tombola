@@ -47,17 +47,26 @@ h4{
 }
 /* h1,h2,h3,h4 Style set Finish*/
 
-div{
-    border:1px solid black;
-}
+/* div{
+    border: 1px solid black;
+} */
 
 button{
     background-color: var(--primary500);
+    cursor: pointer;
+    font-family: 'Mountains of Christmas', cursive;
+    border-radius: 6px;
+    font-weight:700;
+}
+button:hover{
+    background-color:#7e0802;
+    transform: scale(1.1);
 }
 
 #title{
     text-align: center;
-    font-weight: 400;  
+    font-weight: 400; 
+    text-shadow: 2px 2px black; 
 }
 
 /* Decoration on top-left and Top-Right start */
@@ -82,20 +91,23 @@ button{
 /* Decoration on top-left and Top-Right Finish */
 
 
+/* Content Container Start */
 .content{
     display: flex;
     flex-direction: row;
     width:100vw;
     height:90vh;
 }
+/* Content Container Finish */
+
+
 
 /* Winners Zone Start */
 .content__winners{
     display: flex;
     flex-direction:column;
     width:25%;
-    height:100%;
-
+    height:100%;   
 }
 
 .winners{
@@ -110,7 +122,7 @@ button{
     color: var(--primary500);
     max-width: 230px;
     min-width:180px;
-
+    box-shadow: 3px 3px 5px #3a2408;
 }
 
 .winners__item{
@@ -138,6 +150,7 @@ button{
     width:477px;
     background-color: var(--primary400);
     border-radius: 6px;
+    box-shadow: 3px 3px 5px #3a2408;
 }
 
 .numbers__grid p{
@@ -153,9 +166,9 @@ button{
 /* Winners Zone Finish */
 
 
-/* extraction Zone Start */
+/* Extraction Zone Start */
 .extract{
-    margin-top: 0.75rem;
+    margin-top: 0.6rem;
     width:70%;
     min-width: 300px;
     max-width: 350px;
@@ -166,7 +179,7 @@ button{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: #035008;
+    background-color: var(--primary600);
     border-radius: 3px;
 }
 
@@ -174,7 +187,7 @@ button{
     background-color: var(--primary700);
     padding: 0.5rem;
     font-size: 1.8rem;
-    border-radius: 4px
+    border-radius: 4px;
 }
 
 #extract4{
@@ -182,19 +195,43 @@ button{
 }
 
 #extractBtn{
-    border-radius: 6px;
     padding: 0.6rem;
-    font-family: 'Mountains of Christmas', cursive;
-    font-size: 1.2rem;
-    font-weight:700;
-    cursor: pointer;
+    font-size: 1.2rem;    
 }
 
-#extractBtn:hover{
-    background-color:#7e0802;
-    transform: scale(1.1);
+/* Extraction Zone Finish */
+
+
+/* Quotas Zone Start */
+.quotas{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.6rem;
 }
-/* Winners Zone Finish */
+
+.quota-item{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100%;
+}
+
+.quota__price{
+    background-color: var(--primary600);
+    border-radius: 4px;
+    margin-bottom: 3px;
+    padding: 0px 3px;
+}
+
+.quota__type{
+    color:var(--primary500);
+}
+/* Quotas Zone Start */
 
 
 /* Cards Choose zone Start */
@@ -264,11 +301,49 @@ button{
 }
 /* Cards Price zone Finish */
 
-#num2{
+
+/* Total Win zone Start */
+.win__verify{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    width: 70%;
+    margin-top: 1rem;
+}
+
+#total__win{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:1rem;
+}
+
+#total__win h4{
+    color: var(--primary800);
+    font-weight: 600;
+    
+}
+
+#total__win p{
+    background-color:var(--primary400);
+    border-radius: 3px;
+    padding: 0px 3px;
+    box-shadow: 3px 3px 5px #3a2408;
+}
+
+#verifyBtn{
+    width:70px;
+    border-radius: 6px;
+    padding: 0.8rem 0.2rem;
+}
+/* Total Win zone Finish */
+
+/* #num2{
     background-color: var(--primary500);
     color: var(--primary800);
 }
 #num3{
     background-color: var(--primary500);
     color: var(--primary800);
-}
+} */

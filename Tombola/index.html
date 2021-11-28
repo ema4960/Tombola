@@ -31,11 +31,38 @@
         <div class="content__numbers">
             <div class="numbers__grid"></div>
             <div class="extract">
-                <p id="extract4">11</p>
-                <p id="extract3">25</p>
-                <p id="extract2">3</p>
-                <p id="extract">67</p>
-                <button id="extractBtn" onclick="">ESTRAI NUMERO</button>
+                <p id="extract4"></p>
+                <p id="extract3"></p>
+                <p id="extract2"></p>
+                <p id="extract"></p>
+                <button id="extractBtn" onclick="extraction()">ESTRAI NUMERO</button>
+            </div>
+            <div class="quotas">
+                <div class="quota-item">
+                    <p class="quota__price">3.50€</p>
+                    <input type="checkbox"  id="">
+                    <p class="quota__type">Ambo</p>
+                </div>
+                <div class="quota-item">
+                    <p class="quota__price">3.50€</p>
+                    <input type="checkbox"  id="">
+                    <p class="quota__type">Terno</p>
+                </div>
+                <div class="quota-item">
+                    <p class="quota__price">3.50€</p>
+                    <input type="checkbox"  id="">
+                    <p class="quota__type">Quaterna</p>
+                </div>
+                <div class="quota-item">
+                    <p class="quota__price">3.50€</p>
+                    <input type="checkbox"  id="">
+                    <p class="quota__type">Cinquina</p>
+                </div>
+                <div class="quota-item">
+                    <p class="quota__price">3.50€</p>
+                    <input type="checkbox"  id="">
+                    <p class="quota__type">Tombola</p>
+                </div>
             </div>
         </div>
         <div class="content__cards">
@@ -46,6 +73,14 @@
                 <h3>Prezzo Cartelle:</h3>
                 <input type="number" value="0.00">
             </div>
+            <div class="win__verify">
+                <div id="total__win">
+                    <h4>Vincita Tot:</h4>
+                    <p>0.00€</p>
+                </div>
+                <button id="verifyBtn">Verifica Cartella</button>
+            </div>
+            
         </div>
     </div>    
 </body>
