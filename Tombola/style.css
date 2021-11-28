@@ -57,6 +57,7 @@ button{
     font-family: 'Mountains of Christmas', cursive;
     border-radius: 6px;
     font-weight:700;
+    border: 1px solid black;
 }
 button:hover{
     background-color:#7e0802;
@@ -278,10 +279,10 @@ button:hover{
     font-size:1.5rem;
 }
 
-.cards__grid input[type="checkbox"]{
+.cards__grid input{
     cursor: pointer;
-    border-radius: 0.15em;
 }
+
 /* Cards Choose zone Finish */
 
 
@@ -290,14 +291,17 @@ button:hover{
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
 }
 
 .cards__price input{
     margin-left: 0.4rem;
     width: 20%;
-    background-color: var(--primary300);
+    background-color: var(--primary400);
     text-align: center;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #3a2408;
 }
 /* Cards Price zone Finish */
 
