@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Tombola-Home</title>
 </head>
-<body onload="showCartelle();">
+<body onload="startLoad();">
     <img src="./assets/angolo.png" id="background__angleL">
     <h1 id="title">TOMBOLA</h1>
     <img src="./assets/angolo.png" id="background__angleR">
@@ -39,28 +39,28 @@
             </div>
             <div class="quotas">
                 <div class="quota-item">
-                    <p class="quota__price">3.50€</p>
-                    <input type="checkbox"  id="">
+                    <p class="quota__price">0.00€</p>
+                    <input type="checkbox"  class="quota" checked>
                     <p class="quota__type">Ambo</p>
                 </div>
                 <div class="quota-item">
-                    <p class="quota__price">3.50€</p>
-                    <input type="checkbox"  id="">
+                    <p class="quota__price">0.00€</p>
+                    <input type="checkbox"  class="quota" checked>
                     <p class="quota__type">Terno</p>
                 </div>
                 <div class="quota-item">
-                    <p class="quota__price">3.50€</p>
-                    <input type="checkbox"  id="">
+                    <p class="quota__price">0.00€</p>
+                    <input type="checkbox"  class="quota" checked>
                     <p class="quota__type">Quaterna</p>
                 </div>
                 <div class="quota-item">
-                    <p class="quota__price">3.50€</p>
-                    <input type="checkbox"  id="">
+                    <p class="quota__price">0.00€</p>
+                    <input type="checkbox"  class="quota" checked>
                     <p class="quota__type">Cinquina</p>
                 </div>
                 <div class="quota-item">
-                    <p class="quota__price">3.50€</p>
-                    <input type="checkbox"  id="">
+                    <p class="quota__price">0.00€</p>
+                    <input type="checkbox"  class="quota" checked>
                     <p class="quota__type">Tombola</p>
                 </div>
             </div>
@@ -71,12 +71,14 @@
             <div class="cards__grid"></div>
             <div class="cards__price">
                 <h3>Prezzo Cartelle:</h3>
-                <input type="number" value="0.00">
+                <input type="number" value="0.00" id="cardPrice">
+                <button onclick="calculationQuotas()">Calcola Quote</button>
             </div>
             <div class="win__verify">
                 <div id="total__win">
                     <h4>Vincita Tot:</h4>
-                    <p>0.00€</p>
+                    <p id="totalWin">0.00€</p>
+                    
                 </div>
                 <button id="verifyBtn">Verifica Cartella</button>
             </div>
