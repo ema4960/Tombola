@@ -18,7 +18,7 @@ function extraction(){
     extract3Obj=document.getElementById("extract3");
     extract4Obj=document.getElementById("extract4");
     
-    nExtract=Math.floor(Math.random() * 91);
+    nExtract=Math.floor(Math.random() * 90) + 1;
     if(extracted.includes(nExtract)){
         extraction();
     }else{
@@ -28,6 +28,7 @@ function extraction(){
         extract4Obj.innerHTML=extract3Obj.innerHTML;
         extract3Obj.innerHTML=extract2Obj.innerHTML;
         extract2Obj.innerHTML=extractObj.innerHTML;
+        extractObj.style.backgroundColor="var(--primary700)";
         extractObj.innerHTML=nExtract;
         extracted.push(nExtract);
     }

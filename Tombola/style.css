@@ -185,7 +185,7 @@ button:hover{
 }
 
 #extract{
-    background-color: var(--primary700);
+    background-color: var(--primary600);
     padding: 0.5rem;
     font-size: 1.8rem;
     border-radius: 4px;
