@@ -99,7 +99,7 @@ function calculationQuotas(){
 
  function cardVerify(){
 
-   for(f=0;f<2;f++){
+   for(f=0;f<10;f++){
        for (j=0;j<3;j++){
             for (i=0;i<5;i++){    
                 if(extracted.includes(cards[f][j][i])){
