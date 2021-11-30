@@ -1,6 +1,11 @@
 extracted = [];
 SelectedCardS= 0;
 cardcounter=0;
+ambo=0;
+terno=0;
+quaterna=0;
+cinquina=0;
+tombola=0;
 
 function startLoad(){
     cardsGridBox=document.getElementsByClassName("cards__grid"); 
@@ -33,6 +38,9 @@ function extraction(){
         extractObj.innerHTML=nExtract;
         extracted.push(nExtract);
     }
+
+    
+   cardVerify();
 }
 
 function cardCounter(i){
@@ -86,7 +94,44 @@ function calculationQuotas(){
         quotaPriceObj[4].innerHTML=(price).toFixed(2)+"€";
     }
 
+
 }
 
+ function cardVerify(){
 
+   for(f=0;f<2;f++){
+       for (j=0;j<3;j++){
+            for (i=0;i<5;i++){    
+                if(extracted.includes(cards[f][j][i])){
+                        controlLine[j][i]=1; 
+                }
+                if((i<=4) && (ambo=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1")){
+                    
+                    alert("hai fatto ambo nella cartella "+(f+1));
+                    ambo=1;
+                }
+                if((i<=3) && (terno=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1")){
+                    alert("hai fatto terno nella cartella "+(f+1));
+                    terno=1;
+                }
+                if((i<=2) && (quaterna=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1") && (controlLine[j][i+3]=="1")){
+                    alert("hai fatto quaterna nella cartella "+(f+1));
+                    quaterna=1;
+                }
+                if((i<=1) && (cinquina=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1") && (controlLine[j][i+3]=="1")  && (controlLine[j][i+4]=="1")){
+                    alert("hai fatto Cinquina nella cartella "+(f+1));
+                    cinquina=1;
+                }
+                
+            }
+        }
+        if(controlLine.includes("0")){
+                    alert("n0n hai fatto tombola");
+        }
+   }
+
+    
+    /* alert(controlLine); */
+     /* alert("ciao"+cards[f][0][0]); */
+}
 
