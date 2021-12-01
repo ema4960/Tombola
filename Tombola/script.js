@@ -1,11 +1,11 @@
 extracted = [];
 SelectedCardS= 0;
 cardcounter=0;
-ambo=0;
-terno=0;
-quaterna=0;
-cinquina=0;
-tombola=0;
+ambo=false;
+terno=false;
+quaterna=false;
+cinquina=false;
+tombola=false;
 
 function startLoad(){
     cardsGridBox=document.getElementsByClassName("cards__grid"); 
@@ -99,39 +99,86 @@ function calculationQuotas(){
 
  function cardVerify(){
 
-   for(f=0;f<10;f++){
+   for(f=0;f<2;f++){
        for (j=0;j<3;j++){
             for (i=0;i<5;i++){    
-                if(extracted.includes(cards[f][j][i])){
+                /* if(extracted.includes(cards[f][j][i])){
                         controlLine[j][i]=1; 
+                } */
+            
+                if(ambo==false && isAmbo(f,j,i)){
+                    alert("hai fatto ambo nella cartella"+(f+1));
                 }
-                if((i<=4) && (ambo=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1")){
-                    
-                    alert("hai fatto ambo nella cartella "+(f+1));
-                    ambo=1;
+                if(terno==false && isTerno(f,j,i)){
+                    alert("hai fatto terno nella cartella"+(f+1));
                 }
-                if((i<=3) && (terno=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1")){
-                    alert("hai fatto terno nella cartella "+(f+1));
-                    terno=1;
+                if(quaterna==false && isQuaterna(f,j,i)){
+                    alert("hai fatto Quaterna nella cartella"+(f+1));
                 }
-                if((i<=2) && (quaterna=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1") && (controlLine[j][i+3]=="1")){
-                    alert("hai fatto quaterna nella cartella "+(f+1));
-                    quaterna=1;
-                }
-                if((i<=1) && (cinquina=="0") && (controlLine[j][i]=="1") && (controlLine[j][i+1]=="1") && (controlLine[j][i+2]=="1") && (controlLine[j][i+3]=="1")  && (controlLine[j][i+4]=="1")){
-                    alert("hai fatto Cinquina nella cartella "+(f+1));
-                    cinquina=1;
+                if(cinquina==false && isCinquina(f,j,i)){
+                    alert("hai fatto Cinquina nella cartella"+(f+1));
                 }
                 
             }
-        }
-        if(controlLine.includes("0")){
+            
+        } 
+    
+    if(tombola==false && isTombola(f,j)){
+        alert("hai fatto Tombola nella cartella"+(f+1));
+    }     
+      /*   if(controlLine.includes("0")){
                     alert("n0n hai fatto tombola");
-        }
+        } */
    }
 
     
     /* alert(controlLine); */
      /* alert("ciao"+cards[f][0][0]); */
 }
+
+function isAmbo(f,j,i){
+    if(i<=3 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1])){
+        alert(i);
+        ambo=true;
+        return true;
+    }
+    return false;
+}
+
+function isTerno(f,j,i){
+    if(i<=2 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2])){
+        alert(i);
+        terno=true;
+        return true;
+    }
+    return false;
+}
+
+function isQuaterna(f,j,i){
+    if(i<=1 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2]) && extracted.includes(cards[f][j][i+3])){
+        alert(i);
+        quaterna=true;
+        return true;
+    }
+    return false;
+}
+
+function isCinquina(f,j,i){
+    if(i==0 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2]) && extracted.includes(cards[f][j][i+3]) && extracted.includes(cards[f][j][i+4])){
+        alert(i);
+        cinquina=true;
+        return true;
+    }
+    return false;
+}
+
+function isTobola(f,j){
+    if(isCinquina(f,j,0) && isCinquina(f,j+1,0) && isCinquina(f,j+2,0)){
+        alert(i);
+        tombola=true;
+        return true;
+    }
+    return false;
+}
+
 
