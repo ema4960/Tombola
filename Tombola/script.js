@@ -6,6 +6,7 @@ terno=false;
 quaterna=false;
 cinquina=false;
 tombola=false;
+checkedCards=[];
 
 function startLoad(){
     cardsGridBox=document.getElementsByClassName("cards__grid"); 
@@ -37,9 +38,9 @@ function extraction(){
         extractObj.style.backgroundColor="var(--primary700)";
         extractObj.innerHTML=nExtract;
         extracted.push(nExtract);
+        document.getElementsByClassName("smorfia")[0].innerHTML=smorfiaNapoletana[nExtract-1];
     }
 
-    
    cardVerify();
 }
 
@@ -47,8 +48,10 @@ function cardCounter(i){
      checkbox = document.getElementById("cartella"+i);
     if(checkbox.checked){
         cardcounter++;
+        checkedCards.push(i);
     }else{
         cardcounter--;
+        checkedCards.splice(checkedCards.indexOf(i),1);
     }
 }
 
@@ -98,47 +101,42 @@ function calculationQuotas(){
 }
 
  function cardVerify(){
-
-   for(f=0;f<2;f++){
+    winnersObj=document.getElementsByClassName("winners__item");
+   for(f=0;f<checkedCards.length;f++){
+       card=checkedCards[f];
        for (j=0;j<3;j++){
             for (i=0;i<5;i++){    
-                /* if(extracted.includes(cards[f][j][i])){
-                        controlLine[j][i]=1; 
-                } */
-            
-                if(ambo==false && isAmbo(f,j,i)){
-                    alert("hai fatto ambo nella cartella"+(f+1));
+                if(ambo==false && isAmbo(card,j,i)){
+                    winnersObj[0].innerHTML="Ambo:  N°"+(card);
+                    alert("hai fatto ambo nella cartella "+(card));
                 }
-                if(terno==false && isTerno(f,j,i)){
-                    alert("hai fatto terno nella cartella"+(f+1));
+                if(terno==false && isTerno(card,j,i)){
+                    winnersObj[1].innerHTML="terno:  N°"+(card);
+                    alert("hai fatto terno nella cartella "+(card)); 
                 }
-                if(quaterna==false && isQuaterna(f,j,i)){
-                    alert("hai fatto Quaterna nella cartella"+(f+1));
+                if(quaterna==false && isQuaterna(card,j,i)){
+                    winnersObj[2].innerHTML="Quaterna:  N°"+(card);
+                    alert("hai fatto Quaterna nella cartella "+(card));
                 }
-                if(cinquina==false && isCinquina(f,j,i)){
-                    alert("hai fatto Cinquina nella cartella"+(f+1));
+                if(cinquina==false && isCinquina(card,j,i)){
+                    winnersObj[3].innerHTML="Cinquina:  N°"+(card);
+                    alert("hai fatto Cinquina nella cartella "+(card));
                 }
                 
             }
             
         } 
     
-    if(tombola==false && isTombola(f,j)){
-        alert("hai fatto Tombola nella cartella"+(f+1));
-    }     
-      /*   if(controlLine.includes("0")){
-                    alert("n0n hai fatto tombola");
-        } */
+        if(tombola==false && isTombola(card)){
+            winnersObj[4].innerHTML="Tombola:  N°"+(card);
+            alert("hai fatto Tombola nella cartella "+(card));
+         }
    }
 
-    
-    /* alert(controlLine); */
-     /* alert("ciao"+cards[f][0][0]); */
 }
 
 function isAmbo(f,j,i){
     if(i<=3 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1])){
-        alert(i);
         ambo=true;
         return true;
     }
@@ -147,7 +145,6 @@ function isAmbo(f,j,i){
 
 function isTerno(f,j,i){
     if(i<=2 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2])){
-        alert(i);
         terno=true;
         return true;
     }
@@ -156,7 +153,6 @@ function isTerno(f,j,i){
 
 function isQuaterna(f,j,i){
     if(i<=1 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2]) && extracted.includes(cards[f][j][i+3])){
-        alert(i);
         quaterna=true;
         return true;
     }
@@ -165,16 +161,14 @@ function isQuaterna(f,j,i){
 
 function isCinquina(f,j,i){
     if(i==0 && extracted.includes(cards[f][j][i]) && extracted.includes(cards[f][j][i+1]) &&  extracted.includes(cards[f][j][i+2]) && extracted.includes(cards[f][j][i+3]) && extracted.includes(cards[f][j][i+4])){
-        alert(i);
         cinquina=true;
         return true;
     }
     return false;
 }
 
-function isTobola(f,j){
-    if(isCinquina(f,j,0) && isCinquina(f,j+1,0) && isCinquina(f,j+2,0)){
-        alert(i);
+function isTombola(f){
+    if(isCinquina(f,0,0) && isCinquina(f,1,0) && isCinquina(f,2,0)){
         tombola=true;
         return true;
     }
