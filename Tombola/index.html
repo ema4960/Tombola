@@ -16,6 +16,7 @@
     <img src="./assets/angolo.png" id="background__angleL">
     <h1 id="title">TOMBOLA</h1>
     <img src="./assets/angolo.png" id="background__angleR">
+    
 
     <div class="content">
         <div class="content__winners">
@@ -76,7 +77,7 @@
                 <button onclick="calculationQuotas()">Calcola Quote</button>
             </div>
             <div class="win__verify">
-               <button id="verifyBtn">Verifica Cartella</button>
+               <button id="verifyBtn" onclick=" verifyCard()">Verifica Cartella</button>
                 <div id="total__win">
                     <h4>Vincita Tot:</h4>
                     <p id="totalWin">0.00€</p>
@@ -87,5 +88,8 @@
             <button id="resetBtn" onclick="reset()">Resetta</button>
         </div>
     </div>  
+   <div id="background__angleLowL">
+       <img src="./assets/renna.png" alt="renna decorations">
+   </div>   
 </body>
 </html>

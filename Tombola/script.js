@@ -103,24 +103,24 @@ function calculationQuotas(){
  function cardVerify(){
     winnersObj=document.getElementsByClassName("winners__item");
    for(f=0;f<checkedCards.length;f++){
-       card=checkedCards[f];
+       card=checkedCards[f]-1;
        for (j=0;j<3;j++){
             for (i=0;i<5;i++){    
                 if(ambo==false && isAmbo(card,j,i)){
-                    winnersObj[0].innerHTML="Ambo:  N°"+(card);
-                    alert("hai fatto ambo nella cartella "+(card));
+                    winnersObj[0].innerHTML="Ambo:  N°"+(card+1);
+                    alert("hai fatto ambo nella cartella "+(card+1));
                 }
                 if(terno==false && isTerno(card,j,i)){
-                    winnersObj[1].innerHTML="terno:  N°"+(card);
-                    alert("hai fatto terno nella cartella "+(card)); 
+                    winnersObj[1].innerHTML="terno:  N°"+(card+1);
+                    alert("hai fatto terno nella cartella "+(card+1)); 
                 }
                 if(quaterna==false && isQuaterna(card,j,i)){
-                    winnersObj[2].innerHTML="Quaterna:  N°"+(card);
-                    alert("hai fatto Quaterna nella cartella "+(card));
+                    winnersObj[2].innerHTML="Quaterna:  N°"+(card+1);
+                    alert("hai fatto Quaterna nella cartella "+(card+1));
                 }
                 if(cinquina==false && isCinquina(card,j,i)){
-                    winnersObj[3].innerHTML="Cinquina:  N°"+(card);
-                    alert("hai fatto Cinquina nella cartella "+(card));
+                    winnersObj[3].innerHTML="Cinquina:  N°"+(card+1);
+                    alert("hai fatto Cinquina nella cartella "+(card+1));
                 }
                 
             }
@@ -128,8 +128,8 @@ function calculationQuotas(){
         } 
     
         if(tombola==false && isTombola(card)){
-            winnersObj[4].innerHTML="Tombola:  N°"+(card);
-            alert("hai fatto Tombola nella cartella "+(card));
+            winnersObj[4].innerHTML="Tombola:  N°"+(card+1);
+            alert("hai fatto Tombola nella cartella "+(card+1));
          }
    }
 
@@ -176,6 +176,14 @@ function isTombola(f){
 }
 
 function reset(){
-    location.reload();
+    if(confirm("vuoi resettare tutto?")){
+        location.reload();
+    }
+}
+
+function verifyCard(){
+    card=prompt("che cartella vuoi verificare?");
+
+
 }
 

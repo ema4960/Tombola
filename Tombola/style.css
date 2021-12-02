@@ -4,6 +4,7 @@
     --primary700: #013b05;
     --primary600: #035008;
     --primary500: #550400;
+    --primary450: #8d0903;
     --primary400: #8F5A15;
     --primary300: #B5823F;
     /* Color Palette Finish */
@@ -29,22 +30,22 @@ body{
 /* h1,h2,h3,h4 Style set Start */
 h1{
     font-size: 5rem;
-    line-height: 90px;;
+    line-height: 90px;
 }
 
 h2{
     font-size: 3rem;
-    line-height: 56px;;
+    line-height: 56px;
 }
 
 h3{
     font-size: 1.5rem;
-    line-height: 32px;;
+    line-height: 32px;
 }
 
 h4{
     font-size: 1.25rem;
-    line-height: 24px;;
+    line-height: 24px;
 }
 
 @media screen and(min-width:1500px){
@@ -57,22 +58,22 @@ h4{
     }
     h1{
         font-size: 6rem;
-        line-height: 110px;;
+        line-height: 110px;
     }
     
     h2{
         font-size: 3.5rem;
-        line-height: 70px;;
+        line-height: 70px;
     }
     
     h3{
         font-size: 2rem;
-        line-height: 40px;;
+        line-height: 40px;
     }
     
     h4{
         font-size: 1.4rem;
-        line-height: 32px;;
+        line-height: 32px;
     }
 }
 /* h1,h2,h3,h4 Style set Finish*/
@@ -82,7 +83,7 @@ h4{
 } */
 
 button{
-    background-color: var(--primary500);
+    background-color: var(--primary450);
     cursor: pointer;
     font-family: 'Mountains of Christmas', cursive;
     border-radius: 6px;
@@ -91,7 +92,7 @@ button{
     box-shadow: 3px 3px 3px black;
 }
 button:hover{
-    background-color:#7e0802;
+    background-color:#6e0702;
     transform: scale(1.1);
 }
 
@@ -123,7 +124,7 @@ input[type="checkbox"]:checked{
 #title{
     text-align: center;
     font-weight: 400; 
-    text-shadow: 2px 2px black; 
+    text-shadow: 2px 2px var(--primary500); 
 }
 @media screen and(min-width:1500px){
     input[type="checkbox"]{
@@ -154,6 +155,21 @@ input[type="checkbox"]:checked{
     width: 200px;
     z-index: -1;
 }
+
+#background__angleLowL {
+    position: relative;
+    width: 25%;
+    height: 32px;
+    
+}
+
+#background__angleLowL img{
+    width: 200px;
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+}
+
 /* Decoration on top-left and Top-Right Finish */
 
 
@@ -260,6 +276,7 @@ input[type="checkbox"]:checked{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     box-shadow: 3px 1px 3px var(--primary700);
+    padding: 5px 0px;
 }
 
 .numbers__grid{
@@ -358,6 +375,7 @@ input[type="checkbox"]:checked{
     font-size: 1.2rem;    
 }
 
+
 /* Extraction Zone Finish */
 
 
@@ -389,14 +407,20 @@ input[type="checkbox"]:checked{
 }
 
 .quota__type{
-    color:var(--primary700);
+    color:var(--primary500);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1500px){
+    .quotas *{
+        margin-top:1rem;
+    }
 }
 /* Quotas Zone Start */
 
 
 /* Cards Choose zone Start */
-.content__cards{
-    
+.content__cards{  
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -407,19 +431,21 @@ input[type="checkbox"]:checked{
 
 .content__cards h2{
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
+    text-shadow: 1px 1px var(--primary500);
 }
 
 .content__cards h3{
     text-align: center;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--primary500);
 }
 
 .content__cards h4{
     text-align: center;
-    font-weight: 500; 
-    color: var(--primary500); 
+    font-weight: 700; 
+    color: var(--primary500);
+    text-shadow: 1px 1px var(--primary800); 
 }
 
 .cards__grid{
@@ -450,7 +476,30 @@ input[type="checkbox"]:checked{
     }
     .cards__grid p{
         font-size:1.8rem;
+        font-weight: 700;
     }
+
+    .content__cards h2{
+        font-size: 3.5rem;
+        line-height: 70px;
+    }
+    
+    .content__cards h3{
+        text-align: center;
+        font-weight: 700;
+        color: var(--primary500);
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    
+    .content__cards h4{
+        text-align: center;
+        font-weight: 700; 
+        color: var(--primary500); 
+        font-size: 2rem;
+        line-height: 40px;
+    }
+   
 }
 /* Cards Choose zone Finish */
 
@@ -511,9 +560,9 @@ input[type="checkbox"]:checked{
 }
 
 #verifyBtn{
-    width:70px;
+    
     border-radius: 6px;
-    padding: 0.8rem 0.2rem;
+    padding: 1rem 0.8rem;
 }
 /* Total Win zone Finish */
 
@@ -525,4 +574,5 @@ input[type="checkbox"]:checked{
     padding: 0.1rem 0.7rem ;
 
 }
+
 
