@@ -16,6 +16,7 @@
 }
 /* Reset Default Layout Finish */
 
+
 body{
     background-color: var(--primary300);
     font-family: 'Mountains of Christmas', cursive;
@@ -58,10 +59,34 @@ button{
     border-radius: 6px;
     font-weight:700;
     border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
 }
 button:hover{
     background-color:#7e0802;
     transform: scale(1.1);
+}
+
+input[type="checkbox"]{
+    box-shadow: 2px 2px 2px black;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary400);
+    border-radius: 4px;
+    opacity: 0.2;
+    border: 1px solid black;
+}
+input[type="checkbox"]::after{
+    z-index: 2;
+    background-color: var(--primary700);
+    width: 15px;
+    height: 15px;
+}
+
+input[type="checkbox"]:checked{
+    opacity: 1;
+    border: 1px solid black;
+    background-color: var(--primary600);
 }
 
 #title{
@@ -129,6 +154,7 @@ button:hover{
 .winners__item{
     font-size: 1.5rem;
     font-weight: 600;
+    text-shadow: 0.7px 0.7px var(--primary800);
 }
 /* Winners Zone Start */
 
@@ -137,6 +163,7 @@ button:hover{
 .content__numbers{
     width:50%;
     height:100%;
+    
 }
 
 .smorfia{
@@ -175,7 +202,37 @@ button:hover{
     color: var(--primary700);
     font-weight: 600;
     border-radius: 100%;
+    text-shadow: 0.1px 0.1px var(--primary800); 
 }
+
+@media screen and (min-width: 1500px) {
+    .numbers__grid{
+        display: grid;
+        grid-template-columns: repeat(10, 60px);
+        grid-template-rows: repeat(9, 60px);
+        justify-content:center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        gap: 3px;
+        height: 627;
+        width:627px;
+        background-color: var(--primary400);
+        border-radius: 6px;
+        box-shadow: 3px 3px 5px #3a2408;
+    }
+
+    .numbers__grid p{
+        font-size: 2rem;
+        line-height: 60px;
+        width:60px;
+        height:60px;
+
+    }
+  } 
+    
+
 /* Winners Zone Finish */
 
 
@@ -194,6 +251,7 @@ button:hover{
     margin-right: auto;
     background-color: var(--primary600);
     border-radius: 3px;
+
 }
 
 #extract{
@@ -235,14 +293,15 @@ button:hover{
 }
 
 .quota__price{
-    background-color: var(--primary600);
+    background-color: var(--primary400);
+    box-shadow: 1px 1px 3px var(--primary800);
     border-radius: 4px;
     margin-bottom: 3px;
     padding: 0px 3px;
 }
 
 .quota__type{
-    color:var(--primary500);
+    color:var(--primary700);
 }
 /* Quotas Zone Start */
 
@@ -315,6 +374,11 @@ button:hover{
     border-radius: 3px;
     box-shadow: 3px 3px 3px #3a2408;
 }
+
+.cards__price button{
+    margin-left:0.8rem;
+    padding: 0.5rem 0.3rem;
+}
 /* Cards Price zone Finish */
 
 
@@ -325,14 +389,14 @@ button:hover{
     justify-content:space-between;
     align-items: center;
     width: 70%;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 #total__win{
     display:flex;
     flex-direction:column;
     align-items:center;
-    margin-top:1rem;
+    
 }
 
 #total__win h4{
