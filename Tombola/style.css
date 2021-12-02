@@ -51,38 +51,17 @@ h4{
     border: 1px solid black;
 } */
 
-
-
-
-input[type="checkbox"]{
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 3px;
-    border:1px solid black;
-    opacity: 0.3;
-    background: var(--primary400);
-    outline: none;
-    transition: 0.25s;
+button{
+    background-color: var(--primary500);
+    cursor: pointer;
+    font-family: 'Mountains of Christmas', cursive;
+    border-radius: 6px;
+    font-weight:700;
+    border: 1px solid black;
 }
-
-
-input[type="checkbox"]::after{
-    z-index: 2;
-    
-    
-}
-
-input[type="checkbox"]:checked{
-    opacity: 1;
-    right: 0;
-    background-image: url("./assets/checkboxbackground.png");
-}
-
-
-input[type="checkbox"]:checked::after{
-    color: var(--primary500);
-    z-index: 2;
+button:hover{
+    background-color:#7e0802;
+    transform: scale(1.1);
 }
 
 #title{
@@ -163,16 +142,9 @@ input[type="checkbox"]:checked::after{
 .smorfia{
     text-align:center;
     width:80%;
-    max-width: 440px;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--primary600);
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-    box-shadow: 3px 1px 3px var(--primary700);
 }
-
-
 
 .numbers__grid{
     display: grid;
@@ -232,21 +204,8 @@ input[type="checkbox"]:checked::after{
 
 #extractBtn{
     padding: 0.6rem;
-    font-size: 1.2rem; 
-    background-color: var(--primary500);
-    cursor: pointer;
-    font-family: 'Mountains of Christmas', cursive;
-    border-radius: 6px;
-    font-weight:700;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
+    font-size: 1.2rem;    
 }
-
-#extractBtn:hover{
-    background-color:#7e0802;
-    transform: scale(1.1);
-}
-
 
 /* Extraction Zone Finish */
 
@@ -271,7 +230,7 @@ input[type="checkbox"]:checked::after{
 }
 
 .quota__price{
-    background-color: var(--primary700);
+    background-color: var(--primary600);
     border-radius: 4px;
     margin-bottom: 3px;
     padding: 0px 3px;
@@ -327,22 +286,15 @@ input[type="checkbox"]:checked::after{
     font-size:1.5rem;
 }
 
-.cards__grid button{
+.cards__grid input{
     cursor: pointer;
 }
-
-.cards__grid button img{
-    object-fit: contain;
-}
-
-
 
 /* Cards Choose zone Finish */
 
 
 /* Cards Price zone Start */
 .cards__price{
-    width: 90%;
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
@@ -358,25 +310,6 @@ input[type="checkbox"]:checked::after{
     border-radius: 3px;
     box-shadow: 3px 3px 3px #3a2408;
 }
-
-.cards__price button{
-    margin-left: 3%;
-    background-color: var(--primary500);
-    cursor: pointer;
-    font-family: 'Mountains of Christmas', cursive;
-    border-radius: 6px;
-    font-weight:700;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
-}
-
-
-.cards__price button:hover{
-    background-color:#7e0802;
-    transform: scale(1.1);
-}
-
-
 /* Cards Price zone Finish */
 
 
@@ -394,7 +327,7 @@ input[type="checkbox"]:checked::after{
     display:flex;
     flex-direction:column;
     align-items:center;
-
+    margin-top:1rem;
 }
 
 #total__win h4{
@@ -414,19 +347,8 @@ input[type="checkbox"]:checked::after{
     width:70px;
     border-radius: 6px;
     padding: 0.8rem 0.2rem;
-    background-color: var(--primary500);
-    cursor: pointer;
-    font-family: 'Mountains of Christmas', cursive;
-    border-radius: 6px;
-    font-weight:700;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
 }
-
-#verifyBtn:hover{
-    background-color:#7e0802;
-    transform: scale(1.1);
-}
+/* Total Win zone Finish */
 
 #resetBtn{
     position: absolute;
@@ -434,28 +356,6 @@ input[type="checkbox"]:checked::after{
     top: 4%;
     margin-top: 1rem;
     padding: 0.1rem 0.7rem ;
-    background-color: var(--primary500);
-    cursor: pointer;
-    font-family: 'Mountains of Christmas', cursive;
-    border-radius: 6px;
-    font-weight:700;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
+
 }
 
-
-#resetBtn:hover{
-    background-color:#7e0802;
-    transform: scale(1.1);
-}
-
-/* Total Win zone Finish */
-
-/* #num2{
-    background-color: var(--primary500);
-    color: var(--primary800);
-}
-#num3{
-    background-color: var(--primary500);
-    color: var(--primary800);
-} */

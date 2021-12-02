@@ -12,7 +12,7 @@ function startLoad(){
     cardsGridBox=document.getElementsByClassName("cards__grid"); 
     numbersGridBox=document.getElementsByClassName("numbers__grid"); 
     for(i=1;i<=24;i++){
-       cardsGridBox[0].innerHTML+="<button id='cartella"+i+"' onclick='cardCounter("+i+")'><img src'./assets/checkboxbackground.png'></button><p>"+i+"</p>";
+       cardsGridBox[0].innerHTML+="<input type='checkbox' id='cartella"+i+"' onclick='cardCounter("+i+")'></input><p>"+i+"</p>";
     }
     for(i=1;i<=90;i++){
         numbersGridBox[0].innerHTML+="<p class='num'>"+i+"</p>";
