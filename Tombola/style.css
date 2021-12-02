@@ -142,8 +142,13 @@ button:hover{
 .smorfia{
     text-align:center;
     width:80%;
+    max-width: 430px;
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--primary600);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 3px 1px 3px var(--primary700);
 }
 
 .numbers__grid{
