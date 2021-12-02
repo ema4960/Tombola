@@ -20,7 +20,7 @@
 body{
     background-color: var(--primary300);
     font-family: 'Mountains of Christmas', cursive;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 24px;
     max-width: 100%;
     overflow-x: hidden;
@@ -45,6 +45,35 @@ h3{
 h4{
     font-size: 1.25rem;
     line-height: 24px;;
+}
+
+@media screen and(min-width:1500px){
+    body{
+
+        font-size: 1.125rem;
+        line-height: 24px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    h1{
+        font-size: 6rem;
+        line-height: 110px;;
+    }
+    
+    h2{
+        font-size: 3.5rem;
+        line-height: 70px;;
+    }
+    
+    h3{
+        font-size: 2rem;
+        line-height: 40px;;
+    }
+    
+    h4{
+        font-size: 1.4rem;
+        line-height: 32px;;
+    }
 }
 /* h1,h2,h3,h4 Style set Finish*/
 
@@ -71,6 +100,7 @@ input[type="checkbox"]{
     appearance: none;
     width: 15px;
     height: 15px;
+    transition: 0.25s;
     background-color: var(--primary400);
     border-radius: 4px;
     opacity: 0.2;
@@ -86,6 +116,7 @@ input[type="checkbox"]::after{
 input[type="checkbox"]:checked{
     opacity: 1;
     border: 1px solid black;
+    transition: 0.25s;
     background-color: var(--primary600);
 }
 
@@ -94,7 +125,16 @@ input[type="checkbox"]:checked{
     font-weight: 400; 
     text-shadow: 2px 2px black; 
 }
-
+@media screen and(min-width:1500px){
+    input[type="checkbox"]{
+        width: 25px;
+        height: 25px;
+    }
+    input[type="checkbox"]::after{
+        width: 25px;
+        height: 25px;
+    }
+}
 /* Decoration on top-left and Top-Right start */
 #background__angleL{
     position: absolute;
@@ -250,6 +290,10 @@ input[type="checkbox"]:checked{
 }
 
 @media screen and (min-width: 1500px) {
+    .smorfia{
+        max-width: 560px;
+    }
+    
     .numbers__grid{
         display: grid;
         grid-template-columns: repeat(10, 60px);
@@ -352,6 +396,7 @@ input[type="checkbox"]:checked{
 
 /* Cards Choose zone Start */
 .content__cards{
+    
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -398,6 +443,15 @@ input[type="checkbox"]:checked{
     cursor: pointer;
 }
 
+@media screen and (min-width: 1500px){
+    .cards__grid{
+        max-height: 420px;
+        max-width:380px;
+    }
+    .cards__grid p{
+        font-size:1.8rem;
+    }
+}
 /* Cards Choose zone Finish */
 
 
