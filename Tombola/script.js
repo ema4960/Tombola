@@ -20,7 +20,7 @@ function startLoad(){
 }
 
 function extraction(){
-    extractObj=document.getElementById("extract");
+    extract1Obj=document.querySelector(".extract1");
     extract2Obj=document.getElementById("extract2");
     extract3Obj=document.getElementById("extract3");
     extract4Obj=document.getElementById("extract4");
@@ -34,11 +34,12 @@ function extraction(){
         extractedObj[nExtract-1].style.color="var(--primary800)";
         extract4Obj.innerHTML=extract3Obj.innerHTML;
         extract3Obj.innerHTML=extract2Obj.innerHTML;
-        extract2Obj.innerHTML=extractObj.innerHTML;
-        extractObj.style.backgroundColor="var(--primary700)";
-        extractObj.innerHTML=nExtract;
+        extract2Obj.innerHTML=extract1Obj.innerHTML;
+        extract1Obj.style.backgroundColor="var(--primary700)";
+        extract1Obj.innerHTML=nExtract;
         extracted.push(nExtract);
         document.getElementsByClassName("smorfia")[0].innerHTML=smorfiaNapoletana[nExtract-1];
+        animate(extract1Obj);
     }
 
    cardVerify();
@@ -182,8 +183,36 @@ function reset(){
 }
 
 function verifyCard(){
+    gridverifiedObj=document.querySelector(".gridverified");
+    cardveriefiedObj=document.querySelector(".cardverified");
     card=prompt("che cartella vuoi verificare?");
+    if(card>0 && card<25){
+        cardveriefiedObj.classList.add("cardverifiedshow");  
+        gridverifiedObj.innerHTML ="";
+        for( j=0;j<3;j++){
+            for( i=0;i<5;i++){
+                gridverifiedObj.innerHTML+="<p id='grid-item"+j+i+"'>"+cards[card-1][j][i]+"</p>";
+                gridItemObj=document.getElementById("grid-item"+j+i);
+                    if(extracted.includes(cards[card-1][j][i])){
+                    gridItemObj.style.backgroundColor="var(--primary450)";
+
+                }
+            }
+        }
+        
+            
+    }
+}
+function closeverify(){
+    cardveriefiedObj=document.querySelector(".cardverified");
+    cardveriefiedObj.classList.remove("cardverifiedshow");
+}
 
 
+function animate(extract1Obj){
+    extract1Obj.classList.add("extractAnimation");
+    setTimeout(function(){
+       extract1Obj.classList.remove("extractAnimation"); 
+    },1000) 
 }
 
