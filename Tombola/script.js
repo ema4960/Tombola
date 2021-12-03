@@ -216,3 +216,12 @@ function animate(extract1Obj){
     },1000) 
 }
 
+function printpdf(pdf){
+    iframe = document.createElement('iframe'); 
+    iframe.style.visibility = "hidden"; 
+    iframe.src = pdf;      
+    document.body.appendChild(iframe);  
+    iframe.contentWindow.focus();       
+    iframe.contentWindow.print(); 
+}
+

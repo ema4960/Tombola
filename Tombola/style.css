@@ -14,6 +14,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 /* Reset Default Layout Finish */
 
@@ -25,8 +26,15 @@ body{
     line-height: 24px;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
+iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;;
+}
 /* h1,h2,h3,h4 Style set Start */
 h1{
     font-size: 5rem;
@@ -547,6 +555,18 @@ input[type="checkbox"]:checked{
     cursor: pointer;
 }
 
+.printPDF{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.printPDF button{
+    margin-top: 15%;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
 @media screen and (min-width: 1500px){
     .cards__grid{
         max-height: 420px;
@@ -576,6 +596,11 @@ input[type="checkbox"]:checked{
         color: var(--primary500); 
         font-size: 2rem;
         line-height: 40px;
+    }
+
+    .printPDF button{
+        margin-top: 10%;
+
     }
    
 }
