@@ -184,10 +184,14 @@ function reset(){
 
 function verifyCard(){
     gridverifiedObj=document.querySelector(".gridverified");
+    opacityBackObj=document.querySelector(".opacityBack")
     cardveriefiedObj=document.querySelector(".cardverified");
     card=prompt("che cartella vuoi verificare?");
     if(card>0 && card<25){
         cardveriefiedObj.classList.add("cardverifiedshow");  
+        opacityBackObj.classList.add("opacityBackShow");
+        opacityBackShowObj=document.querySelector(".opacityBackShow");
+        opacityBackShowObj.style.height= document.body.scrollHeight+"px";
         gridverifiedObj.innerHTML ="";
         for( j=0;j<3;j++){
             for( i=0;i<5;i++){
@@ -204,8 +208,9 @@ function verifyCard(){
     }
 }
 function closeverify(){
-    cardveriefiedObj=document.querySelector(".cardverified");
-    cardveriefiedObj.classList.remove("cardverifiedshow");
+        cardveriefiedObj=document.querySelector(".cardverified");
+        cardveriefiedObj.classList.remove("cardverifiedshow");
+        opacityBackObj.classList.remove("opacityBackShow");
 }
 
 

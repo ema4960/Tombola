@@ -484,6 +484,24 @@ input[type="checkbox"]:checked{
 }
 
 /*     */
+
+.opacityBack{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0);
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+.opacityBackShow{
+    background-color: rgba(0,0,0,.7);
+    z-index: 5;
+    transition-duration: 1.5s;
+}
+
 .cardverified{
     opacity: 0;
     border-radius: 6px;
@@ -497,10 +515,12 @@ input[type="checkbox"]:checked{
     height: 200px;
     z-index: 3;
     right: 0; left:0;
-    bottom:0; top: 0;
+    bottom:0; top: -25%;
     background-color: var(--primary600);
-    transition-duration: 0.5s;
+    transition-duration: 1s;
+    box-shadow: 5px 5px 5px black;
 }
+
 
 
 .closeVerifyBtn{
@@ -514,8 +534,12 @@ input[type="checkbox"]:checked{
 
 .cardverifiedshow{
     opacity: 1;
-    transition-duration: 1.5s;
+    z-index: 6;
+    transition-duration: 1.3s;
+;
 }
+
+
 
 .cardverifiedshow button{
     width: 100px;
