@@ -24,7 +24,6 @@ body{
     font-family: 'Mountains of Christmas', cursive;
     font-size: 1.5rem;
     line-height: 24px;
-    max-width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
 }
