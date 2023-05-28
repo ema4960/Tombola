@@ -1,5 +1,5 @@
 # Tombola
-tpsi project tombola
+Simple tombola project with pure javascript, css and html
 
 tombola 37,5% 0.375
 cinquina 25% 0.25
